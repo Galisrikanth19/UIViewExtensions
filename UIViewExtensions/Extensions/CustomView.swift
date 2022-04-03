@@ -27,14 +27,7 @@ import UIKit
     @IBInspectable
     var circleViewCustom:Bool = false {
         didSet {
-            //if newValue {
             self.layer.cornerRadius = min(self.frame.width, self.frame.height) / CGFloat(2.0)
-                //layer.masksToBounds = true
-//            }
-//            else{
-//                layer.cornerRadius = 0.0
-//                layer.masksToBounds = false
-//            }
         }
     }
     
@@ -75,9 +68,6 @@ import UIKit
     
     @IBInspectable
     var shadowOffsetCustom: CGSize = .zero {
-//        get {
-//            return layer.shadowOffset
-//        }
         didSet {
             self.layer.shadowOffset = .zero
         }

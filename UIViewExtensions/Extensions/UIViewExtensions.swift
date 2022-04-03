@@ -17,8 +17,7 @@ import UIKit
         set {
             layer.cornerRadius = newValue
             
-            // If masksToBounds is true, subviews will be
-            // clipped to the rounded corners.
+            // If masksToBounds is true, subviews will be clipped to the rounded corners.
             layer.masksToBounds = (newValue > 0)
         }
     }
@@ -46,7 +45,9 @@ import UIKit
             }
             return UIColor(cgColor: cgColor)
         }
-        set { layer.borderColor = newValue?.cgColor }
+        set {
+            layer.borderColor = newValue?.cgColor
+        }
     }
     
     @IBInspectable var borderWidth: CGFloat {
