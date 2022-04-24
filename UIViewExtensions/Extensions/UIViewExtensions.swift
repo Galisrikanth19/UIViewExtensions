@@ -2,7 +2,7 @@
 //  UIViewExtensions.swift
 //  UIViewExtensions
 //
-//  Created by mac on 03/04/22.
+//  Created by Saanvi on 03/04/22.
 //
 
 import Foundation
@@ -60,7 +60,7 @@ import UIKit
     }
     
     
-    //Shadows And Rounded Corners won't work at the same time use CustomView class to work both at the same time
+// MARK: Shadows And Rounded Corners won't work at the same time use CustomView class to work both at the same time
     @IBInspectable var shadowRadius: CGFloat {
         get {
             return layer.shadowRadius
@@ -98,6 +98,39 @@ import UIKit
         set {
             layer.shadowColor = newValue?.cgColor
         }
+    }
+    
+// MARK: Frames, positions, sizes
+    var getWidth: CGFloat {
+        return self.frame.size.width
+    }
+    
+    var getHeight: CGFloat {
+        return self.frame.size.height
+    }
+    
+    var getMinX: CGFloat {
+        return self.frame.minX
+    }
+    
+    var getMaxX: CGFloat {
+        return self.frame.maxX
+    }
+    
+    var getMinY: CGFloat {
+        return self.frame.minY
+    }
+    
+    var getMaxY: CGFloat {
+        return self.frame.maxY
+    }
+    
+    var getCenterX: CGFloat {
+        return self.center.x
+    }
+    
+    var getCenterY: CGFloat {
+        return self.center.y
     }
     
 }
